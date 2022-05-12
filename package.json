@@ -1,7 +1,6 @@
 {
   "name": "functional-es6",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +12,10 @@
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-plugin-immutable": "^1.0.0"
+  },
+  "description": ""
 }
