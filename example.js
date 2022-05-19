@@ -242,10 +242,35 @@
 //--------------------------------------------------------
 // Mapping
 
+// // How we used to double numbers in an array
+// const doubledNumbers = [];
+
+// for (let i = 0; i < doubledNumbers.length; i++) {
+//   const doubled = numbers[i] * 2;
+//   doubledNumbers.push(doubled);
+// }
+
+
+// const numbers = [1,2,3,4,5];
+// numbers.reverse();
+// console.log(numbers);
 
 
 
+// non-functional way of using mapping
 
+// const numbers = [1,2,3,4,5];
+// const doubledNumbers = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   doubledNumbers.push(numbers[i] * 2);
+// }
+//  console.log(doubledNumbers);
+
+// re-write the above functional in a functional programming way
+const numbers = [1,2,3,4,5];
+const double = x => x * 2;
+const doubledNumbers = numbers.map(double);
+console.log(doubledNumbers);
 
 
 
