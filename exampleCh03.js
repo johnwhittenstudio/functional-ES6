@@ -441,7 +441,6 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 // }
 
 
-
 // Find the sum of an array of numbers
 
 // const numbers = [5, 7, 2, 40, 23, 14, 8, 4, 11];
@@ -467,6 +466,59 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 
 //--------------------------------------------------------
 // Combining Functions
+
+
+const employees = [{
+  name: 'John Whitten',
+  age: 38,
+  jobTitle: 'developer',
+  salary: 90000,
+}, {
+  same: 'Katherine Spinella',
+  age: 36,
+  jobTitle: 'boss',
+  salary: 120000,
+}, {
+  name: 'Franny Danza',
+  age: 2,
+  jobTitle: 'snuggler',
+  salary: 1500000,
+}, {
+  name: 'MoonPie Danger',
+  age: 6,
+  jobTitle: 'stuntman',
+  salary: 830000,
+}];
+
+
+// filter by jobTitle
+
+// const developers = employees.filter(employee =>
+//     employee.jobTitle === 'developer');
+// console.log(developers);
+
+// const snugglers = employees.filter(employee =>
+//   employee.jobTitle === 'snuggler');
+// console.log(snugglers);
+
+// const bosses = employees.filter(employee =>
+//   employee.jobTitle === 'boss');
+// console.log(bosses);
+
+const developers = employees.filter(employee =>
+    employee.jobTitle === 'developer');
+const developerSalaries = developers.map(developer => developer.salary);
+const totalDeveloperSalaries = developerSalaries.reduce((acc, x) => acc + x, 0);
+const averageDeveloperSalary = totalDeveloperSalaries / developerSalaries.length;
+console.log(averageDeveloperSalary);
+
+const nonDevelopers = employees.filter(employee =>
+  employee.jobTitle !== 'developer');
+const nonDeveloperSalaries = nonDevelopers.map(nonDev => nonDev.salary);
+const totalNonDeveloperSalaries = nonDeveloperSalaries.reduce((acc, x) => acc + x, 0);
+const averageNonDeveloperSalary = totalNonDeveloperSalaries / nonDeveloperSalaries.length;
+console.log(averageNonDeveloperSalary);
+
 
 
 //--------------------------------------------------------
