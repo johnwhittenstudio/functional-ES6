@@ -245,8 +245,8 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 // Mapping
 
 // // How we used to double numbers in an array
-// const doubledNumbers = [];
 
+// const doubledNumbers = [];
 // for (let i = 0; i < doubledNumbers.length; i++) {
 //   const doubled = numbers[i] * 2;
 //   doubledNumbers.push(doubled);
@@ -268,7 +268,9 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 // }
 //  console.log(doubledNumbers);
 
+
 // ***** re-write the above functional in a functional programming way *****
+
 // const numbers = [1,2,3,4,5];
 // const double = x => x * 2;
 // const doubledNumbers = numbers.map(double);
@@ -559,8 +561,50 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 //--------------------------------------------------------
 // Challenge: Recreate the map function
 
-//--------------------------------------------------------
-// Solution: Recreate the map function
+
+// const map = (arr, func) => {
+
+// }
+
+// // ---- SOLVED ----> Option 1 - for loop
+
+//Solution #1
+
+// const map = (arr, func) => {
+//   const newArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//       const result = func(arr[i]);
+//       newArray.push(result);
+//   }
+//   return newArray;
+// }
+
+
+
+// ---- SOLVED ----> Option 2 (Harder) - using only JavaScript's built-in reduce() function
+
+//Solution #2
+
+const map = (arr, func) =>
+    arr.reduce((acc, x) => [
+      ...acc,
+      func(x),
+    ], []);
+
+
+
+// testing if it works:
+
+// Should be [2, 4, 6]
+console.log(map([1,2,3], x => x * 2));
+
+// Should be [-5, -6, -7, -8, -9, -10]
+console.log(map([5, 6, 7, 8, 9, 10], x => -x));
+
+// Should be ['A', 'B', 'C', 'D']
+console.log(map(['a', 'b', 'c', 'd'], x => x.toUpperCase()));
+
+
 
 
 
