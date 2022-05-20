@@ -266,21 +266,142 @@
 // }
 //  console.log(doubledNumbers);
 
-// re-write the above functional in a functional programming way
-const numbers = [1,2,3,4,5];
-const double = x => x * 2;
-const doubledNumbers = numbers.map(double);
-console.log(doubledNumbers);
-
+// ***** re-write the above functional in a functional programming way *****
+// const numbers = [1,2,3,4,5];
+// const double = x => x * 2;
+// const doubledNumbers = numbers.map(double);
+// console.log(doubledNumbers);
 
 
 
 //--------------------------------------------------------
 // Filtering
 
+// myArray.filter(element => {
+//   ...return true; // (or false)
+// });
+
+// the difference between filter and map is the TYPE of function we pass into it
+// in map we pass in a function that returns a value for each element in the array
+// for filter we pass in a function that returns either true or false
+
+
+// const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+// var evenNumbers = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     evenNumbers.push(numbers[i]);
+//   }
+// }
+
+ // **** now we'll simplify the above function using filter ****
+
+// const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+// const isEven = x => x % 2 === 0; 
+
+// const evenNumbers = numbers.filter(isEven);
+
+// console.log(evenNumbers);
+
+
+// const words = [
+//   'hello',
+//   'goodbye',
+//   'the',
+//   'Antarctica',
+// ];
+
+// // const isLongerThan5 = word => word.length > 5;
+// // const longWords = words.filter(isLongerThan5);
+// // console.log(longWords);
+
+
+// ***** write a higher order function to do this mith minimal code *****
+
+// const createLengthTest = minLength => 
+//     word => word.length > minLength;
+// const longWords = words.filter(createLengthTest(5));
+// console.log(longWords);
+
+// This here is a very nice functional code
+
+
+
 //--------------------------------------------------------
 // Every/some
 
+// we pass them a function that reurns either true or false, but every/some returns a boolean (only true or false)
+
+// -- every returns true if and only if a given condition is true for all elements in an array
+// -- some returns true if the conditions are true any of the elements in an array, false if and only if every condition is false for all elements in the array
+
+// example
+
+// const employees = [{
+//   name: 'John Whitten',
+//   salary: 90000,
+// }, {
+//   same: 'Katherine Spinella',
+//   salary: 120000,
+// }, {
+//   name: 'Franny Danza',
+//   salary: 1500000,
+// }, {
+//   name: 'MoonPie Danger',
+//   salary: 830000,
+// }];
+
+// const makesMoreThanOneMillion = employee =>
+//     employee.salary > 1000000;
+// const result = employees.some(makesMoreThanOneMillion);
+
+// console.log(result);
+
+// //---------------------------//
+
+// const formValues = [
+//   'Mike',
+//   'Stephen',
+//   'California',
+//   'developer',
+// ];
+
+// const isNotEmpty = string => !!string;
+// const allFieldsFilled = formValues.every(isNotEmpty);
+// console.log(allFieldsFilled);
+
+
+
+
 //--------------------------------------------------------
 // Slicing
+
+
+
+
+
+
+
+//--------------------------------------------------------
+// Sorting
+
+
+//--------------------------------------------------------
+// Reducing
+
+
+//--------------------------------------------------------
+// Combining Functions
+
+
+//--------------------------------------------------------
+// Challenge: Recreate the map function
+
+//--------------------------------------------------------
+// Solution: Recreate the map function
+
+
+
 
