@@ -1,5 +1,7 @@
 // const add = (x, y) => x + y;
 
+const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-options")
+
 // const double = number => number * 2;
 // //as opposed to
 // // const double = function(number) {
@@ -426,9 +428,40 @@
 //--------------------------------------------------------
 // Reducing
 
+// reduce() takes an array of data and reduce it to a single validateUseBuiltInsOption, like a sum or average
+
+// myArray.reduce((acc, element) => 
+//   ...
+//   return ...
+// );
+
+
+// const sum = myArray.reduce((acc, element) => {
+//   return acc + element, 0);
+// }
 
 
 
+// Find the sum of an array of numbers
+
+// const numbers = [5, 7, 2, 40, 23, 14, 8, 4, 11];
+// const sum = numbers.reduce((acc, x) => {
+//     console.log(`acc is ${acc}`);
+//     console.log(`x is ${x}`);
+//     return acc + x;
+// }, 0)
+// console.log(sum);
+
+
+// Find the product of an array of numbers
+
+// const numbers = [5, 7, 2, 40, 23, 14, 8, 4, 11];
+// const product = numbers.reduce((acc, x) => {
+//     console.log(`acc is ${acc}`);
+//     console.log(`x is ${x}`);
+//     return acc * x;
+// }, 1) // <- make sure starting value is 1, with 0 everything is multiplied by 0 resulting in 0
+// console.log(product);
 
 
 
