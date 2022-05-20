@@ -468,30 +468,57 @@ const { validateUseBuiltInsOption } = require("@babel/preset-env/lib/normalize-o
 // Combining Functions
 
 
-const employees = [{
-  name: 'John Whitten',
-  age: 38,
-  jobTitle: 'developer',
-  salary: 90000,
-}, {
-  same: 'Katherine Spinella',
-  age: 36,
-  jobTitle: 'boss',
-  salary: 120000,
-}, {
-  name: 'Franny Danza',
-  age: 2,
-  jobTitle: 'snuggler',
-  salary: 1500000,
-}, {
-  name: 'MoonPie Danger',
-  age: 6,
-  jobTitle: 'stuntman',
-  salary: 830000,
-}];
+/// employee info to be sorted
+
+// const employees = [{
+//   name: 'John Whitten',
+//   age: 38,
+//   jobTitle: 'developer',
+//   salary: 90000,
+// }, {
+//   name: 'Jan Benson',
+//   age: 43,
+//   jobTitle: 'developer',
+//   salary: 130000,
+// }, {
+//   name: 'Joe Spinella',
+//   age: 39,
+//   jobTitle: 'boss',
+//   salary: 140000,
+// }, {
+//   name: 'Pickles',
+//   age: 3,
+//   jobTitle: 'snuggler',
+//   salary: 198000,
+// }, {
+//   name: 'Jessi DiTillio',
+//   age: 36,
+//   jobTitle: 'boss',
+//   salary: 1090000,
+// }, {
+//   name: 'Ada Lovelace',
+//   age: 45,
+//   jobTitle: 'developer',
+//   salary: 190000,
+// }, {
+//   same: 'Katherine Spinella',
+//   age: 36,
+//   jobTitle: 'boss',
+//   salary: 120000,
+// }, {
+//   name: 'Franny Danza',
+//   age: 2,
+//   jobTitle: 'snuggler',
+//   salary: 1500000,
+// }, {
+//   name: 'MoonPie Danger',
+//   age: 6,
+//   jobTitle: 'stuntman',
+//   salary: 830000,
+// }];
 
 
-// filter by jobTitle
+//----****--- filter above info by jobTitle ----****--- 
 
 // const developers = employees.filter(employee =>
 //     employee.jobTitle === 'developer');
@@ -505,19 +532,27 @@ const employees = [{
 //   employee.jobTitle === 'boss');
 // console.log(bosses);
 
-const developers = employees.filter(employee =>
-    employee.jobTitle === 'developer');
-const developerSalaries = developers.map(developer => developer.salary);
-const totalDeveloperSalaries = developerSalaries.reduce((acc, x) => acc + x, 0);
-const averageDeveloperSalary = totalDeveloperSalaries / developerSalaries.length;
-console.log(averageDeveloperSalary);
+// const stuntpeople = employees.filter(employee =>
+//   employee.jobTitle === 'stuntman');
+// console.log(stuntpeople);
 
-const nonDevelopers = employees.filter(employee =>
-  employee.jobTitle !== 'developer');
-const nonDeveloperSalaries = nonDevelopers.map(nonDev => nonDev.salary);
-const totalNonDeveloperSalaries = nonDeveloperSalaries.reduce((acc, x) => acc + x, 0);
-const averageNonDeveloperSalary = totalNonDeveloperSalaries / nonDeveloperSalaries.length;
-console.log(averageNonDeveloperSalary);
+
+//----****--- filter above info by average salaries ----****--- 
+
+// const developers = employees.filter(employee =>
+//     employee.jobTitle === 'developer');
+// const developerSalaries = developers.map(developer => developer.salary);
+// const totalDeveloperSalaries = developerSalaries.reduce((acc, x) => acc + x, 0);
+// const averageDeveloperSalary = totalDeveloperSalaries / developerSalaries.length;
+// console.log(averageDeveloperSalary);
+
+// const nonDevelopers = employees.filter(employee =>
+//   employee.jobTitle !== 'developer');
+// const nonDeveloperSalaries = nonDevelopers.map(nonDev => nonDev.salary);
+// const totalNonDeveloperSalaries = nonDeveloperSalaries.reduce((acc, x) => acc + x, 0);
+// const averageNonDeveloperSalary = totalNonDeveloperSalaries / nonDeveloperSalaries.length;
+// console.log(averageNonDeveloperSalary);
+
 
 
 
