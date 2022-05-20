@@ -359,7 +359,7 @@
 
 // console.log(result);
 
-// //---------------------------//
+// //------next example function-------//
 
 // const formValues = [
 //   'Mike',
@@ -374,12 +374,21 @@
 
 
 
-
 //--------------------------------------------------------
 // Slicing
 
+// not a higher order function, does nat take a function as an argument, has important way to work with arrays
 
+// sort(), reverse(), push(), pop() all mutate an Array, which is prohibited in functional programming
 
+// turn mutating functions into non-mutating function using SLICE()
+
+// slice makes a copy of an array
+
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// console.log(numbers.slice().reverse());
+// console.log(numbers);
 
 
 
@@ -387,9 +396,40 @@
 //--------------------------------------------------------
 // Sorting
 
+// .sort is a mutating function!
+
+//----!!!----myArray.slice().sort();-----!!!---- 
+
+
+// const mixedUpNumbers = [10, 5, 7, 4, 1, 9, 2, 6, 3, 8];
+// const ascending = (a, b) => {
+//     if (a < b) return -1;
+//     if (a > b) return 1;
+//     return 0;
+// }
+// const sortedNumbers = mixedUpNumbers.slice().sort(ascending);
+// console.log(sortedNumbers);
+
+// **** in order to sort in descending order, we'll just need to change the > and < around *****
+
+// const mixedUpNumbers = [10, 5, 7, 4, 1, 9, 2, 6, 3, 8];
+// const descending = (a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+//   return 0;
+// }
+// const sortedNumbers = mixedUpNumbers.slice().sort(descending);
+// console.log(sortedNumbers);
+
+
 
 //--------------------------------------------------------
 // Reducing
+
+
+
+
+
 
 
 //--------------------------------------------------------
